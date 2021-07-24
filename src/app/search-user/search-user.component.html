@@ -1,1 +1,17 @@
-<p>search-user works!</p>
+<nav class="navbar navbar-light bg-success ">
+    <h3>Search for github user.</h3>
+  <form class="">
+  <div class="input-group">
+    <input type="text" class="form-control" name="userinput" [(ngModel)]="searchuserQuery" placeholder="Search" />
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit" (click)="searchUser()">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
+
+</nav>
+<p>{{searchuserQuery}}</p>
+<p>{{user.name}}</p>
+<div class="card" style="width:150px;"><img [src]="user.avatar_url" alt="" class="img-fluid" width="150px"></div>
