@@ -3,13 +3,13 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-search-repository',
   templateUrl: './search-repository.component.html',
-  styleUrls: ['./search-repository.component.css']
+  styleUrls: ['./search-repository.component.css'],
 })
 export class SearchRepositoryComponent implements OnInit {
+  searchRepoQuery!: string;
 
-  constructor() { }
+  constructor() {}
+  searchrepo(){};
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

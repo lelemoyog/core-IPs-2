@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../model/user';
 import { SearchUserRequestService } from '../services/search-user-request.service';
+import { HttpClient } from '@angular/common/http';
+
 
 
 @Component({
@@ -11,16 +13,33 @@ import { SearchUserRequestService } from '../services/search-user-request.servic
 export class SearchUserComponent implements OnInit {
   searchuserQuery!: string;
   user!: User;
+  repos!: any[]
 
-  constructor(private SearchUserRequestService: SearchUserRequestService) {}
+  constructor(
+    private SearchUserRequestService: SearchUserRequestService,
+    private HttpClient: HttpClient
+  ) {
+    // this.repos = new
+  }
 
-  searchUser(){
+   search(){
+     this.searchUser(),
+     this.searchRepos(this.searchuserQuery)
+   }
+
+  searchUser() {
     this.SearchUserRequestService.getUsers(this.searchuserQuery);
     this.user = this.SearchUserRequestService.users;
-    console.log(this.user)
+    console.log(this.user);
+  }
+  searchRepos(searchuserQuery: string) {
+    this.SearchUserRequestService.searchrepos(searchuserQuery).subscribe(
+      (response: any) => {
+        this.repos = (response);
+        console.log(this.repos)
+      }
+    );
   }
 
-  ngOnInit() {
-    
-  }
+  ngOnInit() {}
 }

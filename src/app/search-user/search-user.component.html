@@ -4,14 +4,16 @@
   <div class="input-group">
     <input type="text" class="form-control" name="userinput" [(ngModel)]="searchuserQuery" placeholder="Search" />
     <div class="input-group-btn">
-      <button class="btn btn-default" type="submit" (click)="searchUser()">
+      <button class="btn btn-default" type="submit" (click)="search()" >
         <i class="glyphicon glyphicon-search"></i>
       </button>
     </div>
   </div>
 </form>
-
 </nav>
+<div *ngFor="let repo of repos">{{repo.name}}<br>{{repo.description}}
+</div>
 <p>{{searchuserQuery}}</p>
 <p>{{user.name}}</p>
 <div class="card" style="width:150px;"><img [src]="user.avatar_url" alt="" class="img-fluid" width="150px"></div>
+<button>view repos</button>

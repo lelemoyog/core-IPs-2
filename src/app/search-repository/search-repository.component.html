@@ -1,1 +1,13 @@
-<p>search-repository works!</p>
+<nav class="navbar navbar-light bg-success ">
+    <h3>Search for github repositories.</h3>
+  <form class="">
+  <div class="input-group">
+    <input type="text" class="form-control" name="userinput" [(ngModel)]="searchRepoQuery" placeholder="Search" />
+    <div class="input-group-btn">
+      <button class="btn btn-default" type="submit" (click)="searchrepo()">
+        <i class="glyphicon glyphicon-search"></i>
+      </button>
+    </div>
+  </div>
+</form>
+</nav>
