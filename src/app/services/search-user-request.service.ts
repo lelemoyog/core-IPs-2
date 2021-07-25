@@ -28,14 +28,15 @@ export class SearchUserRequestService {
             this.users.name = response.name;
             this.users.avatar_url = response.avatar_url;
             this.users.bio = response.bio;
-            this.users.repos_url = response.repos_url;
+            this.users.html_url = response.html_url;
+            this.users.created_at=response.created_at
             resolve();
           },
           (error) => {
             this.users.name = 'Not Found';
             this.users.avatar_url = 'Not Found';
             this.users.bio = 'Not Found';
-            this.users.repos_url = 'Not Found';
+            this.users.html_url = 'Not Found';
             reject(error);
           }
         );
