@@ -14,4 +14,15 @@
 
 
 
+ <div class="col-sm-9">
+    <div class="card bg-light">
+      <div class="card-body"  *ngFor="let repo of repos">
+        <p>{{repo.full_name}}</p>
+        <h5 class="card-title">Repository name:{{repo.name}}</h5>
+        <p class="card-text">Description:{{repo.description}}</p>
+        <a [href]="repo.html_url" class="btn btn-primary">view repo</a>
+      </div>
+    </div>
+  </div>
+
 

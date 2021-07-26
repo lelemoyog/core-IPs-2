@@ -10,7 +10,7 @@ import { SearchRepoRequestService } from '../services/search-repo-request.servic
 })
 export class SearchRepositoryComponent implements OnInit {
   searchRepoQuery!: string;
-  repos!: Repo;
+  repos!:any;
 
   constructor(private SearchRepoRequestService: SearchRepoRequestService) {}
   search(){
@@ -20,7 +20,7 @@ export class SearchRepositoryComponent implements OnInit {
   searchrepo(searchRepoQuery: string) {
      this.SearchRepoRequestService.reporequest(searchRepoQuery).subscribe(
        (response: any) => {
-         this.repos = response;
+         this.repos = response.items;
          console.log(this.repos);
        }
      );

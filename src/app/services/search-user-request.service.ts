@@ -20,7 +20,7 @@ export class SearchUserRequestService {
     let promise = new Promise<void>((resolve, reject) => {
       this.http
         .get<IsearchUser>(
-          `${environment.base_url}${searchuserQuery}?&api_key=${environment.token}`
+          `https://api.github.com/users/${searchuserQuery}`
         )
         .toPromise()
         .then(
@@ -46,7 +46,7 @@ export class SearchUserRequestService {
 
   searchrepos(searchuserQuery:string) {
     return this.http.get(
-      `${environment.base_url}${searchuserQuery}/repos?`
+      `https://api.github.com/users/${searchuserQuery}/repos?`
     );
   }
 }

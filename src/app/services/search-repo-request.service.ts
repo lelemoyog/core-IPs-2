@@ -14,7 +14,7 @@ export class SearchRepoRequestService {
 
   reporequest(searchRepoQuery: string) {
     return this.http.get<IsearchRepo>(
-      `${environment.base_url1}q=${searchRepoQuery}`
+      `https://api.github.com/search/repositories?q=${searchRepoQuery}`
     );
   }
 }
