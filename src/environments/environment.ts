@@ -4,7 +4,6 @@
 
 export const environment = {
   production: false,
-  token: 'hp_dmnn2Vbg8fi1nVqbR5lxBT43XAKBaw4HUzj8',
   base_url: 'https://api.github.com/users/',
   base_url1:'https://api.github.com/search/repositories?'
 };

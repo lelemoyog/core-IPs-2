@@ -18,8 +18,12 @@ export class SearchRepositoryComponent implements OnInit {
   }
 
   searchrepo(searchRepoQuery: string) {
-    this.SearchRepoRequestService.reporequest(searchRepoQuery);
-    this.repos=this.SearchRepoRequestService.repo
+     this.SearchRepoRequestService.reporequest(searchRepoQuery).subscribe(
+       (response: any) => {
+         this.repos = response;
+         console.log(this.repos);
+       }
+     );
   }
 
   ngOnInit(): void {}

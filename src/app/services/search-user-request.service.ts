@@ -46,7 +46,7 @@ export class SearchUserRequestService {
 
   searchrepos(searchuserQuery:string) {
     return this.http.get(
-      `${environment.base_url}${searchuserQuery}/repos?&api_key=${environment.token}`
+      `${environment.base_url}${searchuserQuery}/repos?`
     );
   }
 }
