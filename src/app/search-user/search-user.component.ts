@@ -19,7 +19,7 @@ export class SearchUserComponent implements OnInit {
     private SearchUserRequestService: SearchUserRequestService,
     private HttpClient: HttpClient
   ) {
-    // this.repos = new
+    
   }
 
    search(){

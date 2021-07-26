@@ -7,6 +7,7 @@ import { componentFactoryName } from '@angular/compiler';
 const routes: Routes = [
   { path: 'searchuser', component: SearchUserComponent },
   { path: 'searchrepository', component: SearchRepositoryComponent },
+  { path: '', redirectTo: '/searchuser', pathMatch: 'full' },
 ];
 
 @NgModule({
