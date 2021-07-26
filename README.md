@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
 
+#### By ISSA SAITEMU
+## Description
+a web application where your are allowed to search for git hub users and repositories
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -25,3 +29,22 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Setup/Installation Requirements
+* create an empty git repository
+* git init
+* git clone https://github.com/lelemoyog/core-IPs-2.git
+* and start using code
+
+## Technologies Used
+* HTML
+* CSS
+* JAVASCRIPT
+*Bootstrap
+* Angular 
+## Support and contact details
+For any support contanct me via email issasaitemu@gmail.com
+### License
+ [MIT License](License).
+Copyright (c) {2021}  saitemu issa.
